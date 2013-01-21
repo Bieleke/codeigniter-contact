@@ -2,7 +2,7 @@
 
 // Email recipients
 $config['recipients'] = array(
-	'your@email.com',
+	'pbielen@gmail.com',
 	// 'another@email.com',
 );
 
@@ -17,17 +17,18 @@ $config['start_delimiter'] = '<p style="color:#b94a48;">';
 $config['end_delimiter'] = '</p>';
 
 // Error and success messages
-$config['error_message'] = 'Oops, something is wrong! Please, drop us a line on email.';
-$config['success_message'] = 'Thanks, your message successfully sent. Get in touch!';
+// Error and success messages
+$config['error_message'] = 'Oops, er ging iets fout! Probeert U a.u.b. opnieuw.';
+$config['success_message'] = 'Bedankt, uw bericht is succesvol verzonden. We nemen spoedig contact met U op!';
 
 // Labels
-$config['subject_label'] = 'Subject';
-$config['message_label'] = 'Message';
-$config['name_label'] = 'Name';
-$config['email_label'] = 'Email';
+$config['subject_label'] = 'Onderwerp';
+$config['message_label'] = 'Bericht';
+$config['name_label'] = 'Naam';
+$config['email_label'] = 'E-mail';
 
 // Submit button
-$config['submit_button'] = 'Send';
+$config['submit_button'] = 'Verzenden';
 
 
 /* End of file contact.php */
