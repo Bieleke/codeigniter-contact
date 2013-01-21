@@ -23,7 +23,6 @@ class Contact extends CI_Controller {
 		$this->form_validation->set_rules('subject', $this->config->item('subject_label', 'contact'), 'trim|required|xss_clean');
 		$this->form_validation->set_rules('message', $this->config->item('message_label', 'contact'), 'trim|required|xss_clean');
 		$this->form_validation->set_rules('email', $this->config->item('email_label', 'contact'), 'trim|required|valid_email|xss_clean');
-		$this->form_validation->set_rules('email_confirm', '', 'max_length[0]'); // honeypot must be empty
 		$this->form_validation->set_rules('name', $this->config->item('name_label', 'contact'), 'trim|required|xss_clean');
 
 		if ($this->form_validation->run() == false)
@@ -65,16 +64,6 @@ class Contact extends CI_Controller {
 				'value' => $this->form_validation->set_value('email'),
 				'class' => '',
 				'tabindex' => '4',
-			);
-			// honeypot field
-			$data['email_confirm'] = array(
-				'type' => 'email',
-				'name' => 'email_confirm',
-				'id' => 'email_confirm',
-				'value' => '',
-				'class' => '',
-				'style' => 'position:absolute;left:-9999px;',
-				'tabindex' => '-1',
 			);
 			$data['submit'] = array(
 				'type' => 'submit',
